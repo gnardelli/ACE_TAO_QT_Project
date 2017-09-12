@@ -1,0 +1,28 @@
+// $Id$
+
+// Messenger.idl
+#include "typedefMessage.idl" 
+
+exception MessengerUnableToSendMessage2
+{
+};
+
+
+	
+
+
+interface Messenger2
+{
+
+    boolean send_message2(in string Name,
+                       in string LastName,
+		       in long eta,
+                       in string subject,
+                       in string message)
+    raises (MessengerUnableToSendMessage2);
+	
+	
+    oneway void cmdUpdateParametersLogicBack (
+        in LocalInterface::CompositeTypes::cmdUpdateParametersCompTypeLogic cmdUpdateParametersParamLogic
+    );
+};
